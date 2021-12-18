@@ -6,7 +6,6 @@ from tkinter import *
 from pdf2image import convert_from_path
 from goto import with_goto
 
-
 excel_path=""
 pdf_path=""
 output_path=""
@@ -16,7 +15,6 @@ name=""
 number=""
 
 PDFFILEOPENOPTIONS = dict(defaultextension=".pdf",filetypes=[('pdf file', '*.pdf')])
-
 
 def columncheck(l):
 
@@ -35,7 +33,6 @@ def columncheck(l):
         print("please enter again")
         var=columncheck(l)
         return var
-
     
 def excel_path1():
     global excel_path
@@ -48,7 +45,6 @@ def pdf_path1():
 def output_path1():
     global output_path
     output_path=filedialog.askdirectory()
-
 
 @with_goto
 def get_excel():
@@ -63,6 +59,7 @@ def get_excel():
     root1.mainloop()
     if (excel_path==""):
         goto.start
+        
 @with_goto
 def get_pdf():
     label.start2
@@ -82,12 +79,7 @@ def get_pdf():
 def start_func():
     get_excel()
     get_pdf()
-    
-    
-
-     
-    
-    
+      
 def pdf_convert():
     global pdf_path
     global exdata
@@ -147,7 +139,6 @@ def convertfile():
     root3.mainloop()
     if(output_path==""):
         goto.start3
-
     
     root4=Tk()
     root4.geometry('900x200')
@@ -157,16 +148,7 @@ def convertfile():
     JPG_button.grid(row = 2, column = 2)
     exit_button=Button(root4,text="Exit",bg="yellow", fg="blue",font=("Arial Bold", 15),command=root4.destroy)
     exit_button.grid(row = 4, column = 0)
-    root4.mainloop()
-    
-
-
-
-
-
-    
-
-
+    root4.mainloop() 
 
 if __name__=="__main__":
     start_func()
