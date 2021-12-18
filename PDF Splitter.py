@@ -111,7 +111,6 @@ def jpg_convert():
     for i in range(len(images)):
         val=exdata[name][i]
         val1=exdata[number][i]
-
         images[i].save(output_path+ '\\{0}_{1}.jpg'.format(val1,val), 'JPEG')
     
 @with_goto
